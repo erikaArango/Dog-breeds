@@ -1,6 +1,4 @@
 import React,{useEffect, useState, } from 'react'
-//import { allBreeds, all } from '../functions/functions'
-//import {Link, useParams} from 'react-router-dom'
 import axios from "axios"
 
 const Dogs = () => {
@@ -21,40 +19,24 @@ const Dogs = () => {
     };
 
 
-
     useEffect(()=>{
         apiBreeds()
     },[setDogBreeds]);
 
   return (
-    <>
         <div class="container text-center">
         <div class="row">
           {dogBreeds &&
           dogBreeds.map(imgBreed => (
             <div class="col">
-                 <a href="#">{dogBreeds}</a>
+              <a href="#">{dogBreeds}</a>
             </div>
               ))
-            }
-        
-
-          </div>
-          </div>   
-    </>
+          }
+        </div>
+        </div>   
   )
 }
 
 export default Dogs
 
-
-/* {dogBreeds != null ? (
-
-  dogBreeds.map(imgBreed => (
-        
-      <div class="col">
-            <img   src={imgBreed} alt="" className='rounded dogImg' />
-      </div>
-  ))
-  
-  ): ('there are no dog breeds')}  */

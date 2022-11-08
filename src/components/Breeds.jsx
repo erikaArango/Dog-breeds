@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import { allBreeds, all } from '../functions/functions'
+import { allBreeds } from '../functions/functions'
 
 const Breeds = () => {
     const [breeds, setBreeds] = useState(null)
