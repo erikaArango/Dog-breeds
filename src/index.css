@@ -18,3 +18,10 @@ code {
   margin: 0 auto;
   padding: 2rem 0;
 }
+
+.dogImg{
+  width: 200px;
+  height: 200px;
+  --bs-border-radius: 27px;
+  margin: 2vh;
+}
