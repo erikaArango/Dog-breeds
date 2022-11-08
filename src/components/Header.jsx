@@ -18,13 +18,13 @@ const Header = () => {
                                 <NavLink className="nav-link" to='/'>Home </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to='/'>All </NavLink>
+                                <NavLink className="nav-link" to='/all'>All </NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/breeds">Breeds</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to='/breeds' className="nav-link">Sub-Breeds</NavLink>
+                                <NavLink to='/' className="nav-link">Sub-Breeds</NavLink>
                             </li>
                         </ul>
                     </div>

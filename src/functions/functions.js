@@ -1,10 +1,10 @@
-/* import axios from "axios";
-//funcion que lista todo
+import axios from "axios";
+/* //funcion que lista todo
 const all = async (state) => {
     const request = await axios.get('https://dog.ceo/api/breeds/list/all')
     state(request.data.message)   
     //console.log('all ',request.data.message)
-}
+} */
 
 //funcion que lista  las imagenes de razas
 const allBreeds = async (state) => {
@@ -14,5 +14,5 @@ const allBreeds = async (state) => {
 }
 
 export {
-    allBreeds,all
-} */
+    allBreeds
+}
