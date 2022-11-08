@@ -1,11 +1,14 @@
-import React,{useEffect, useState, } from 'react'
-import axios from "axios"
+import React,{useEffect, useState, } from 'react';
+import axios from "axios";
+import { useParams } from 'react-router-dom';
+
 
 const Dogs = () => {
     const [dogBreeds, setDogBreeds] = useState([])
+    let {id} = useParams();
     const apiBreeds  = async () => { 
       const res = await axios.get('https://dog.ceo/api/breeds/list/all');
-      console.log('list all',res.data.message)
+      //console.log('list all',res.data.message)
       Object.entries(res.data.message).map(([key,value]) =>{
         if (value.length > 0) {
           value.map((item) => {
@@ -14,7 +17,7 @@ const Dogs = () => {
         } else {
           setDogBreeds((dogBreeds) => [...dogBreeds,key]);
         }
-        console.log('key,value',key,value);
+
       });
     };
 
@@ -23,16 +26,25 @@ const Dogs = () => {
         apiBreeds()
     },[setDogBreeds]);
 
+    const change = event => {
+      console.log('event',event.target.value)
+    }
+
   return (
         <div class="container text-center">
         <div class="row">
-          {dogBreeds &&
-          dogBreeds.map(imgBreed => (
-            <div class="col">
-              <a href="#">{dogBreeds}</a>
-            </div>
+          <select class="form-select" onChange = {change} aria-label="Default select example">
+
+            {dogBreeds &&
+            dogBreeds.map(imgBreed => (
+
+              <option selected value = {imgBreed} >{imgBreed}</option>
+              
+
               ))
           }
+          </select>
+
         </div>
         </div>   
   )

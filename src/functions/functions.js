@@ -6,7 +6,7 @@ const all = async (state) => {
     //console.log('all ',request.data.message)
 } */
 
-//funcion que lista  las imagenes de razas
+/* //funcion que lista  las imagenes de razas
 const allBreeds = async (state) => {
     const request = await axios.get('https://dog.ceo/api/breed/hound/images')
     state(request.data.message)   
@@ -15,4 +15,4 @@ const allBreeds = async (state) => {
 
 export {
     allBreeds
-}
+} */
