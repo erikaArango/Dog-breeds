@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,3 +23,61 @@ code {
   --bs-border-radius: 27px;
   margin: 2vh;
 }
+
+  /*Navbar*/
+.dogImg{
+  width: 200px;
+  height: 200px;
+  --bs-border-radius: 27px;
+  margin: 2vh;
+}
+
+#log {
+  max-width: 23vh;
+  margin-top: -9px;
+  margin-left: 5%;
+}
+
+.navbar-expand-lg {
+  background-color: #fcfcfc; 
+  box-shadow: 0 10px 14px -7px #5b5b5f;
+  height: 57px;
+  
+}
+
+.navbar-expand-lg .navbar-collapse {
+  font-family: 'Berkshire Swash', cursive;
+  justify-content: flex-end;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color:#ACD9B2 ;
+  font-size: 1.3rem;
+  padding: 0.5rem 1.5rem;
+  margin: 1.5rem;
+}
+
+/*Home*/
+.home{
+  justify-content: center;
+}
+
+.dogs{
+  width: 77vh;
+  margin-top: 10vh;
+  margin-left: 38vh;
+}
+
+h2{
+  font-family: 'Berkshire Swash', cursive;
+  color: #ACD9B2;
+  margin: 180px 0px 0px 200px;
+  font-size: 3.6rem;
+}
+
+
+
+
+
+
+
