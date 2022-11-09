@@ -1,52 +1,61 @@
 import React,{useEffect, useState, } from 'react';
-import axios from "axios";
-import { useParams } from 'react-router-dom';
-
+import Dog from './Dog'
 
 const Dogs = () => {
-    const [dogBreeds, setDogBreeds] = useState([])
-    let {id} = useParams();
-    const apiBreeds  = async () => { 
-      const res = await axios.get('https://dog.ceo/api/breeds/list/all');
-      //console.log('list all',res.data.message)
-      Object.entries(res.data.message).map(([key,value]) =>{
-        if (value.length > 0) {
-          value.map((item) => {
-            setDogBreeds((dogBreeds) => [...dogBreeds, `${key} ${item}`]);
-          });
-        } else {
-          setDogBreeds((dogBreeds) => [...dogBreeds,key]);
-        }
+    const [breeds, setBreeds] = useState([])
+    const [show, setShow] = useState([])
 
-      });
+    useEffect(() => {
+      fetch('https://dog.ceo/api/breeds/list/all')
+        .then((response) => response.json())
+        .then((data) => {
+          setBreeds(data.message)
+          setShow(data.message)
+        })
+    }, []);
+   
+    const handleChange = (event) => {
+      setShow({})
+      if(event.target.value == 'all') {
+        setShow(breeds)
+      }else {
+        const obj = {}
+        obj[event.target.value] = []
+        setShow(obj)
+      }
     };
-
-
-    useEffect(()=>{
-        apiBreeds()
-    },[setDogBreeds]);
-
-    const change = event => {
-      console.log('event',event.target.value)
-    }
+    
 
   return (
-        <div class="container text-center">
-        <div class="row">
-          <select class="form-select" onChange = {change} aria-label="Default select example">
+        <div className="row">
 
-            {dogBreeds &&
-            dogBreeds.map(imgBreed => (
-
-              <option selected value = {imgBreed} >{imgBreed}</option>
-              
-
-              ))
-          }
+          <select className="form-select" onChange={handleChange} aria-label="Default select example">
+            <option selected value= "all">TODOS</option>
+            {Object.keys(breeds).map((breed, subBreeds) => {
+            return (
+              <option key={breed} value={breed}>{breed}</option>
+            );
+          })}
           </select>
 
         </div>
-        </div>   
+              <h1>Listado</h1>
+        <div>
+        {Object.keys(show).map((breed, subBreeds) => {
+          if(show[breed].length > 0) {
+              for(const i in show[breed]) {
+                return ( 
+                  <Dog breed={breed} subbreed={show[breed][i]} />
+                )
+              }
+          }else {
+            return ( 
+              <Dog breed={breed} />
+            )
+          }
+        })}
+      </div>
+             
   )
 }
 

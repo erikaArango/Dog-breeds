@@ -1,4 +1,4 @@
-import axios from 'axios'
+/* import axios from 'axios'
 import React,{useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 //import { allBreeds } from '../functions/functions'
@@ -8,9 +8,9 @@ const Breeds = () => {
   let {id} = useParams();
   console.log('soy id',id)
 
-  /* 
+   
   let breed = parts[0];
-  let subBreed = parts[1]; */
+  let subBreed = parts[1]; 
   let subBreed = ''
 
   const resBreed = async (breed) => {
@@ -29,12 +29,12 @@ const Breeds = () => {
 
 return (
   <div>
-      <div class="container text-center">
-      <div class="row">
+      <div className="container text-center">
+      <div className="row">
 
       {breeds !== undefined ? (
           breeds.map(imgBreed => (
-            <div class="col">
+            <div className="col">
               <img   src={imgBreed} alt="" className='rounded dogImg' />
             </div>
         ))
@@ -48,7 +48,7 @@ return (
 }
 
 export default Breeds
-
+ */
 
 
 
