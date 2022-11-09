@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 import Logo from '../img/logo.png'
-
 const Header = () => {
     return (
         <section id="particles-js" className="section home">
@@ -18,7 +17,7 @@ const Header = () => {
                             <NavLink className="nav-link" to='/'>Home </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/breeds">Breeds</NavLink>
+                            <NavLink className="nav-link" to="/breeds">Hounds Breed</NavLink>
                         </li>
                         </ul>
                     </div>

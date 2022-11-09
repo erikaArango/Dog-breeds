@@ -8,7 +8,6 @@ const Dogs = () => {
     let {id} = useParams();
     const apiBreeds  = async () => { 
       const res = await axios.get('https://dog.ceo/api/breeds/list/all');
-      //console.log('list all',res.data.message)
       Object.entries(res.data.message).map(([key,value]) =>{
         if (value.length > 0) {
           value.map((item) => {
