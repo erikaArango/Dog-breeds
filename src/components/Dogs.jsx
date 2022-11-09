@@ -21,7 +21,6 @@ const Dogs = () => {
       });
     };
 
-
     useEffect(()=>{
         apiBreeds()
     },[setDogBreeds]);
@@ -31,22 +30,15 @@ const Dogs = () => {
     }
 
   return (
-        <div class="container text-center">
         <div class="row">
           <select class="form-select" onChange = {change} aria-label="Default select example">
-
             {dogBreeds &&
             dogBreeds.map(imgBreed => (
-
-              <option selected value = {imgBreed} >{imgBreed}</option>
-              
-
-              ))
-          }
+            <option selected value = {imgBreed} >{imgBreed}</option>
+            ))
+            }
           </select>
-
         </div>
-        </div>   
   )
 }
 

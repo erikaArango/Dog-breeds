@@ -15,17 +15,11 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav  ml-auto pr-4 list">
                         <li className="nav-item">
-                                <NavLink className="nav-link" to='/'>Home </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to='/all'>All </NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/breeds">Breeds</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink to='/' className="nav-link">Sub-Breeds</NavLink>
-                            </li>
+                            <NavLink className="nav-link" to='/'>Home </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/breeds">Breeds</NavLink>
+                        </li>
                         </ul>
                     </div>
                 </div>
